@@ -1,0 +1,2 @@
+github "ReactiveX/RxSwift" ~> 4.1
+github "onevcat/Kingfisher" ~> 4.7

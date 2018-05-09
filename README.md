@@ -35,7 +35,7 @@ optionSelected
     .disposed(by: disposeBag)
 ```
 
-### Retrieve an Image without a Image View
+### Retrieve an Image without an Image View
 
 Every `KingfisherManager` supports fetching an image from a URL, returning a `Single<UIImage>`:
 

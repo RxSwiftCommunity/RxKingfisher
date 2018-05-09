@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Pc-Wp-8J9">
+                                <rect key="frame" x="27.5" y="44" width="319" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Pc-Wp-8J9" secondAttribute="height" multiplier="15:8" id="HVu-1N-XZ0"/>
+                                </constraints>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sgz-QL-dvM">
+                                <rect key="frame" x="0.0" y="427" width="375" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="gdb-dF-6Ea"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwA-ea-5BW">
+                                <rect key="frame" x="119" y="321.5" width="137" height="44"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <state key="normal" title="Save image"/>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="B3C-b8-Com">
+                                <rect key="frame" x="177" y="333" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="B3C-b8-Com" firstAttribute="centerX" secondItem="xwA-ea-5BW" secondAttribute="centerX" id="3Tq-CS-37x"/>
+                            <constraint firstItem="xwA-ea-5BW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6B0-9b-jaC"/>
+                            <constraint firstItem="sgz-QL-dvM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OtY-R9-uyF"/>
+                            <constraint firstItem="B3C-b8-Com" firstAttribute="centerY" secondItem="xwA-ea-5BW" secondAttribute="centerY" id="PXq-c9-FIO"/>
+                            <constraint firstItem="xwA-ea-5BW" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Rfu-M8-elF"/>
+                            <constraint firstItem="9Pc-Wp-8J9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="blW-7B-hLL"/>
+                            <constraint firstItem="sgz-QL-dvM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cql-ra-RIX"/>
+                            <constraint firstItem="sgz-QL-dvM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="heG-gA-9K8"/>
+                            <constraint firstItem="9Pc-Wp-8J9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="j9p-Mm-rqP"/>
+                            <constraint firstItem="9Pc-Wp-8J9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.85" id="vq4-TE-4sU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnSave" destination="xwA-ea-5BW" id="CWj-Lw-wtX"/>
+                        <outlet property="image" destination="9Pc-Wp-8J9" id="lS1-RD-nMD"/>
+                        <outlet property="loader" destination="B3C-b8-Com" id="mjA-pM-4Dk"/>
+                        <outlet property="picker" destination="sgz-QL-dvM" id="Edt-WP-QAZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>

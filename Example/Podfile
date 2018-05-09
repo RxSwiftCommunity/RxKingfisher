@@ -1,0 +1,8 @@
+target 'Example' do
+  use_frameworks!
+  inhibit_all_warnings!
+
+  pod 'RxKingfisher', :path => '../'
+  pod 'Fakery'
+  pod 'RxCocoa'
+end

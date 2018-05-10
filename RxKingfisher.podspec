@@ -8,15 +8,15 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/RxSwiftCommunity/RxKingfisher"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Shai Mishali" => "freak4pc@gmail.com" }
-  s.social_media_url   = ""
+  s.social_media_url   = "https://raw.githubusercontent.com/RxSwiftCommunity/RxKingfisher/master/Images/logo.png"
   s.ios.deployment_target = "8.0"
-  s.osx.deployment_target = "10.9"
-  s.watchos.deployment_target = "2.0"
+  s.osx.deployment_target = "10.10"
   s.tvos.deployment_target = "9.0"
   s.source       = { :git => "https://github.com/RxSwiftCommunity/RxKingfisher.git", :tag => s.version.to_s }
   s.source_files  = "Sources/**/*"
   s.frameworks  = "Foundation"
+  s.swift_version = "4.0"
 
-  s.dependency 'Kingfisher'
-  s.dependency 'RxSwift'
+  s.dependency 'Kingfisher', '~> 4'
+  s.dependency 'RxSwift', '~> 4'
 end

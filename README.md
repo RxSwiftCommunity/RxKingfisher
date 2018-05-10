@@ -12,6 +12,8 @@
 
 **RxKingfisher** is a Reactive Extension for <a href="https://github.com/onevcat/Kingfisher" target="_blank">Kingfisher</a> - a lightweight, pure-Swift library for downloading and caching images from the web. 
 
+<p align="center"><img src="https://raw.githubusercontent.com/RxSwiftCommunity/RxKingfisher/master/Images/example.gif" alt="RxKingfisher Example" title="RxKingfisher Example" /></a>
+
 It provides Reactive Extensions on top of Kingfisher's `.kf` namespace, via `.kf.rx` and introduces two main usages:
 
 #### Bind URL to Image View
@@ -37,7 +39,7 @@ optionSelected
 
 ### Retrieve an Image without an Image View
 
-Every `KingfisherManager` supports fetching an image from a URL, returning a `Single<UIImage>`:
+Every `KingfisherManager` supports fetching an image from a URL, returning a `Single<Image>`:
 
 ```swift
 tappedButton

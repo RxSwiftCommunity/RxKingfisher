@@ -1,6 +1,6 @@
 //
 //  RxKingfisherError.swift
-//  Kingfisher
+//  RxKingfisher
 //
 //  Created by Shai Mishali on 5/5/18.
 //  Copyright © 2018 RxSwift Community. All rights reserved.

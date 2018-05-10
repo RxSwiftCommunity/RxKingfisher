@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-<!-- CIRCLE CI -->
+<a href="https://circleci.com/gh/RxSwiftCommunity/RxKingfisher/tree/master"><img src="https://img.shields.io/circleci/project/github/RxSwiftCommunity/RxKingfisher/master.svg?style=flat"></a>
 <a href="https://github.com/Carthage/Carthage/"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
 <a href="http://github.com/RxSwiftCommunity/RxKingfisher"><img src="https://img.shields.io/cocoapods/v/RxKingfisher.svg?style=flat"></a>
 <a href="https://raw.githubusercontent.com/RxSwiftCommunity/RxKingfisher/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/RxKingfisher.svg?style=flat"></a>

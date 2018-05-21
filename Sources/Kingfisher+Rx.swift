@@ -10,7 +10,7 @@ import RxSwift
 import Kingfisher
 
 extension Reactive where Base == Kingfisher<ImageView> {
-    public func setImage(with resource: Resource,
+    public func setImage(with resource: Resource?,
                          placeholder: Placeholder? = nil,
                          options: KingfisherOptionsInfo? = nil) -> Single<Image> {
         return Single<Image>.create { [base] single in

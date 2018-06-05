@@ -46,9 +46,4 @@ extension Reactive where Base == Kingfisher<ImageView> {
     }
 }
 
-extension Kingfisher: ReactiveCompatible {
-    public var rx: Reactive<Kingfisher> {
-        get { return Reactive(self) }
-        set { }
-    }
-}
+extension Kingfisher: ReactiveCompatible { }

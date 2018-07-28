@@ -37,7 +37,7 @@ extension Reactive where Base == Kingfisher<ImageView> {
 
     public func image(placeholder: Placeholder? = nil,
                       options: KingfisherOptionsInfo? = nil) -> Binder<URL?> {
-        // We pass `base.base` here since `Binder` requires a retainable object
+        // `base.base` is the `Kingfisher` class' associated `ImageView`.
         return Binder(base.base) { imageView, image in
             imageView.kf.setImage(with: image,
                                   placeholder: placeholder,

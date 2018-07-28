@@ -6,6 +6,7 @@
 //  Copyright © 2018 RxSwift Community. All rights reserved.
 //
 
+import RxCocoa
 import RxSwift
 import Kingfisher
 
@@ -35,21 +36,14 @@ extension Reactive where Base == Kingfisher<ImageView> {
     }
 
     public func image(placeholder: Placeholder? = nil,
-                      options: KingfisherOptionsInfo? = nil) -> AnyObserver<Resource> {
-        return AnyObserver.init(eventHandler: { [base] e in
-            guard case .next(let resource) = e else { return }
-
-            _ = base.rx.setImage(with: resource,
-                                 placeholder: placeholder,
-                                 options: options)
-                       .subscribe()
-        })
+                      options: KingfisherOptionsInfo? = nil) -> Binder<URL?> {
+        // `base.base` is the `Kingfisher` class' associated `ImageView`.
+        return Binder(base.base) { imageView, image in
+            imageView.kf.setImage(with: image,
+                                  placeholder: placeholder,
+                                  options: options)
+        }
     }
 }
 
-extension Kingfisher: ReactiveCompatible {
-    public var rx: Reactive<Kingfisher> {
-        get { return Reactive(self) }
-        set { }
-    }
-}
+extension Kingfisher: ReactiveCompatible { }

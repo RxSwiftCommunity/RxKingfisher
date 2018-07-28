@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RxKingfisher"
-  s.version      = "0.1.1"
+  s.version      = "0.2.0"
   s.summary      = "Reactive extension for the Kingfisher image downloading and caching library"
   s.description  = <<-DESC
     Reactive extension for the Kingfisher image downloading and caching library
@@ -19,4 +19,5 @@ Pod::Spec.new do |s|
 
   s.dependency 'Kingfisher', '~> 4'
   s.dependency 'RxSwift', '~> 4'
+  s.dependency 'RxCocoa', '~> 4'
 end

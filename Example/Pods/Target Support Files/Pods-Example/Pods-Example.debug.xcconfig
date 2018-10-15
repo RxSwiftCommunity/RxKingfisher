@@ -3,8 +3,8 @@ FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Fakery" "
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
 OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Fakery/Fakery.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa/RxCocoa.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxKingfisher/RxKingfisher.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift/RxSwift.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Fakery" -framework "Kingfisher" -framework "RxCocoa" -framework "RxKingfisher" -framework "RxSwift"
-OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+OTHER_LDFLAGS = $(inherited) -framework "CFNetwork" -framework "Fakery" -framework "Foundation" -framework "Kingfisher" -framework "RxCocoa" -framework "RxKingfisher" -framework "RxSwift"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

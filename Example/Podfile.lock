@@ -1,12 +1,13 @@
 PODS:
-  - Fakery (3.3.0)
-  - Kingfisher (4.7.0)
-  - RxCocoa (4.1.2):
+  - Fakery (3.4.0)
+  - Kingfisher (4.10.0)
+  - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
-  - RxKingfisher (0.1):
-    - Kingfisher
-    - RxSwift
-  - RxSwift (4.1.2)
+  - RxKingfisher (0.3.0):
+    - Kingfisher (~> 4)
+    - RxCocoa (~> 4.3)
+    - RxSwift (~> 4.3)
+  - RxSwift (4.3.1)
 
 DEPENDENCIES:
   - Fakery
@@ -14,7 +15,7 @@ DEPENDENCIES:
   - RxKingfisher (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Fakery
     - Kingfisher
     - RxCocoa
@@ -25,12 +26,12 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Fakery: 3aae11a87721c807c18c6456500d088c1230d3e5
-  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
-  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
-  RxKingfisher: 5fed24d8c4363516a154f65912922fb2d96694a0
-  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  Fakery: 885e894a3e7c392e1da96c6e46a1abe5a0b28686
+  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxKingfisher: dd61e5b07b40f35a947c60a3c3c1b5dc396c9bc3
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
 
 PODFILE CHECKSUM: baa62f16fcbeff154a30bfdae5da8f95110fd11b
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.6.0.beta.1

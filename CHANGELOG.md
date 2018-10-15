@@ -12,6 +12,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Removed
 
+## [0.3.0] - 2018-10-15
+
+### Added
+
+- Support for Swift 4.2 and Xcode 10.
+
 ## [0.2.0] - 2018-07-28
 
 ### Changed

@@ -8,7 +8,7 @@ jobs:
       XCODE_TEST_REPORTS: /tmp/xcode-test-results
       LANG: en_US.UTF-8
     macos:
-      xcode: '9.3.0'
+      xcode: '10.0.0'
     steps:
       - checkout
       - run: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS $XCODE_TEST_REPORTS
@@ -25,16 +25,25 @@ jobs:
           paths:
             - Carthage
       - run:
-          name: Build macOS
-          command: xcodebuild build -scheme RxKingfisher-macOS -project RxKingfisher.xcodeproj -sdk macosx -destination "arch=x86_64" | xcpretty
+          name: macOS, Swift 4
+          command: set -o pipefail && xcodebuild build SWIFT_VERSION=4.0 -scheme RxKingfisher-macOS -project RxKingfisher.xcodeproj -sdk macosx -destination "arch=x86_64" | xcpretty
       - run:
-          name: Build iOS
-          command: xcodebuild build -scheme RxKingfisher-iOS -project RxKingfisher.xcodeproj -sdk iphonesimulator -destination "name=iPhone X" | xcpretty
+          name: macOS, Swift 4.2
+          command: set -o pipefail && xcodebuild build SWIFT_VERSION=4.2 -scheme RxKingfisher-macOS -project RxKingfisher.xcodeproj -sdk macosx -destination "arch=x86_64" | xcpretty
       - run:
-          name: Build tvOS
-          command: xcodebuild build -scheme RxKingfisher-tvOS -project RxKingfisher.xcodeproj -sdk appletvsimulator -destination "name=Apple TV 4K (at 1080p)" | xcpretty
+          name: iOS, Swift 4
+          command: set -o pipefail && xcodebuild build SWIFT_VERSION=4.0 -scheme RxKingfisher-iOS -project RxKingfisher.xcodeproj -sdk iphonesimulator -destination "name=iPhone X" | xcpretty
+      - run:
+          name: iOS, Swift 4.2
+          command: set -o pipefail && xcodebuild build SWIFT_VERSION=4.2 -scheme RxKingfisher-iOS -project RxKingfisher.xcodeproj -sdk iphonesimulator -destination "name=iPhone X" | xcpretty
+      - run:
+          name: tvOS, Swift 4
+          command: set -o pipefail && xcodebuild build SWIFT_VERSION=4.0 -scheme RxKingfisher-tvOS -project RxKingfisher.xcodeproj -sdk appletvsimulator -destination "name=Apple TV 4K (at 1080p)" | xcpretty
+      - run:
+          name: Build tvOS, Swift 4.2
+          command: set -o pipefail && xcodebuild build SWIFT_VERSION=4.2 -scheme RxKingfisher-tvOS -project RxKingfisher.xcodeproj -sdk appletvsimulator -destination "name=Apple TV 4K (at 1080p)" | xcpretty
       - store_artifacts:
-          path: /tmp/xcode-build-results
+          path: $XCODE_TEST_REPORTS
   "RxKingfisher Release":
     working_directory: ~/RxSwiftCommunity/RxKingfisher
     parallelism: 1
@@ -42,7 +51,7 @@ jobs:
     environment:
       LANG: en_US.UTF-8
     macos:
-      xcode: '9.3.0'
+      xcode: '10.0.0'
     steps:
       - checkout
       - run:

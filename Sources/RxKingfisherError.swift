@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum RxKingfisherError: Swift.Error {
+public enum RxKingfisherError: Swift.Error {
     case kingfisherError(NSError)
     case missingImage
 }

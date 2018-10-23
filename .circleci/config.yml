@@ -62,7 +62,7 @@ jobs:
           command: rm ~/.cocoapods/config.yaml # This hack is needed since CircleCI forces --verbose
       - run:
           name: Push Podspec to Trunk
-          command: pod trunk push --skip-tests --allow-warnings
+          command: pod trunk push --swift-version=4.0 --skip-tests --allow-warnings
 workflows:
   version: 2
   build:

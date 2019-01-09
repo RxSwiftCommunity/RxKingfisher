@@ -10,28 +10,27 @@ import RxCocoa
 import RxSwift
 import Kingfisher
 
-extension Reactive where Base == Kingfisher<ImageView> {
+extension Reactive where Base == KingfisherWrapper<ImageView> {
     public func setImage(with resource: Resource?,
                          placeholder: Placeholder? = nil,
                          options: KingfisherOptionsInfo? = nil) -> Single<Image> {
         return Single<Image>.create { [base] single in
-            let task = base.setImage(with: resource,
-                                     placeholder: placeholder,
-                                     options: options) { image, error, _, _ in
-                if let error = error {
-                    single(.error(RxKingfisherError.kingfisherError(error)))
-                    return
-                }
-
-                guard let image = image else {
-                    single(.error(RxKingfisherError.missingImage))
-                    return
-                }
-
-                single(.success(image))
-            }
-
-            return Disposables.create { task.cancel() }
+            let task = base.setImage(
+                with: resource,
+                placeholder: placeholder,
+                options: options,
+                progressBlock: nil,
+                completionHandler: { (result) in
+                    switch result {
+                    case let .failure(error):
+                        single(.error(RxKingfisherError.kingfisherError(error)))
+                    case let .success(value):
+                        let image = value.image
+                        single(.success(image))
+                    }
+            })
+            
+            return Disposables.create { task?.cancel() }
         }
     }
 
@@ -46,4 +45,4 @@ extension Reactive where Base == Kingfisher<ImageView> {
     }
 }
 
-extension Kingfisher: ReactiveCompatible { }
+extension KingfisherWrapper: ReactiveCompatible { }

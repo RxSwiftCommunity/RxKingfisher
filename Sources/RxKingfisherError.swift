@@ -9,6 +9,6 @@
 import Foundation
 
 public enum RxKingfisherError: Swift.Error {
-    case kingfisherError(NSError)
+    case kingfisherError(Error)
     case missingImage
 }

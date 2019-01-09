@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		52D6D9871BEFF229002C0205 /* RxKingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* RxKingfisher.framework */; };
-		788F590E20A348D000EF5FFE /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788F590D20A348D000EF5FFE /* OHHTTPStubs.framework */; };
-		788F591020A348E600EF5FFE /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788F590F20A348E600EF5FFE /* OHHTTPStubs.framework */; };
-		788F591220A348F100EF5FFE /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788F591120A348F000EF5FFE /* OHHTTPStubs.framework */; };
 		788F591420A3494500EF5FFE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F591320A3494500EF5FFE /* logo.png */; };
 		788F591520A3494500EF5FFE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F591320A3494500EF5FFE /* logo.png */; };
 		788F591620A3494500EF5FFE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F591320A3494500EF5FFE /* logo.png */; };
@@ -106,7 +103,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				52D6D9871BEFF229002C0205 /* RxKingfisher.framework in Frameworks */,
-				788F590E20A348D000EF5FFE /* OHHTTPStubs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +129,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD7502881C68FEDE006590AF /* RxKingfisher.framework in Frameworks */,
-				788F591020A348E600EF5FFE /* OHHTTPStubs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +137,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD7502921C690C7A006590AF /* RxKingfisher.framework in Frameworks */,
-				788F591220A348F100EF5FFE /* OHHTTPStubs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,7 +678,7 @@
 				);
 				INFOPLIST_FILE = Configs/RxKingfisher.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RxKingfisher.RxKingfisher-iOS";
@@ -711,7 +705,7 @@
 				);
 				INFOPLIST_FILE = Configs/RxKingfisher.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RxKingfisher.RxKingfisher-iOS";
 				PRODUCT_NAME = RxKingfisher;
@@ -777,7 +771,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -804,7 +798,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -826,7 +820,7 @@
 				INFOPLIST_FILE = Configs/RxKingfisher.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RxKingfisher.RxKingfisher-macOS";
 				PRODUCT_NAME = RxKingfisher;
 				SDKROOT = macosx;
@@ -853,7 +847,7 @@
 				INFOPLIST_FILE = Configs/RxKingfisher.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RxKingfisher.RxKingfisher-macOS";
 				PRODUCT_NAME = RxKingfisher;
 				SDKROOT = macosx;

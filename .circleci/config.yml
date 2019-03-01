@@ -8,7 +8,7 @@ jobs:
       XCODE_TEST_REPORTS: /tmp/xcode-test-results
       LANG: en_US.UTF-8
     macos:
-      xcode: '10.0.0'
+      xcode: '10.1.0'
     steps:
       - checkout
       - run: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS $XCODE_TEST_REPORTS
@@ -25,20 +25,11 @@ jobs:
           paths:
             - Carthage
       - run:
-          name: macOS, Swift 4
-          command: set -o pipefail && xcodebuild build SWIFT_VERSION=4.0 -scheme RxKingfisher-macOS -project RxKingfisher.xcodeproj -sdk macosx -destination "arch=x86_64" | xcpretty
-      - run:
           name: macOS, Swift 4.2
           command: set -o pipefail && xcodebuild build SWIFT_VERSION=4.2 -scheme RxKingfisher-macOS -project RxKingfisher.xcodeproj -sdk macosx -destination "arch=x86_64" | xcpretty
       - run:
-          name: iOS, Swift 4
-          command: set -o pipefail && xcodebuild build SWIFT_VERSION=4.0 -scheme RxKingfisher-iOS -project RxKingfisher.xcodeproj -sdk iphonesimulator -destination "name=iPhone X" | xcpretty
-      - run:
           name: iOS, Swift 4.2
           command: set -o pipefail && xcodebuild build SWIFT_VERSION=4.2 -scheme RxKingfisher-iOS -project RxKingfisher.xcodeproj -sdk iphonesimulator -destination "name=iPhone X" | xcpretty
-      - run:
-          name: tvOS, Swift 4
-          command: set -o pipefail && xcodebuild build SWIFT_VERSION=4.0 -scheme RxKingfisher-tvOS -project RxKingfisher.xcodeproj -sdk appletvsimulator -destination "name=Apple TV 4K (at 1080p)" | xcpretty
       - run:
           name: Build tvOS, Swift 4.2
           command: set -o pipefail && xcodebuild build SWIFT_VERSION=4.2 -scheme RxKingfisher-tvOS -project RxKingfisher.xcodeproj -sdk appletvsimulator -destination "name=Apple TV 4K (at 1080p)" | xcpretty
@@ -51,7 +42,7 @@ jobs:
     environment:
       LANG: en_US.UTF-8
     macos:
-      xcode: '10.0.0'
+      xcode: '10.1.0'
     steps:
       - checkout
       - run:
@@ -62,7 +53,7 @@ jobs:
           command: rm ~/.cocoapods/config.yaml # This hack is needed since CircleCI forces --verbose
       - run:
           name: Push Podspec to Trunk
-          command: pod trunk push --swift-version=4.0 --skip-tests --allow-warnings
+          command: pod trunk push --swift-version=4.2 --skip-tests --allow-warnings
 workflows:
   version: 2
   build:

@@ -11,9 +11,6 @@
 		788F591420A3494500EF5FFE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F591320A3494500EF5FFE /* logo.png */; };
 		788F591520A3494500EF5FFE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F591320A3494500EF5FFE /* logo.png */; };
 		788F591620A3494500EF5FFE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F591320A3494500EF5FFE /* logo.png */; };
-		78A52EDC209EF999002E26D2 /* RxKingfisherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A52ED9209EF999002E26D2 /* RxKingfisherError.swift */; };
-		78A52EDD209EF999002E26D2 /* RxKingfisherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A52ED9209EF999002E26D2 /* RxKingfisherError.swift */; };
-		78A52EDF209EF999002E26D2 /* RxKingfisherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A52ED9209EF999002E26D2 /* RxKingfisherError.swift */; };
 		78A52EE0209EF999002E26D2 /* KingfisherManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A52EDA209EF999002E26D2 /* KingfisherManager+Rx.swift */; };
 		78A52EE1209EF999002E26D2 /* KingfisherManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A52EDA209EF999002E26D2 /* KingfisherManager+Rx.swift */; };
 		78A52EE3209EF999002E26D2 /* KingfisherManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A52EDA209EF999002E26D2 /* KingfisherManager+Rx.swift */; };
@@ -66,7 +63,6 @@
 		788F590F20A348E600EF5FFE /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/Mac/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		788F591120A348F000EF5FFE /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/tvOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		788F591320A3494500EF5FFE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Images/logo.png; sourceTree = SOURCE_ROOT; };
-		78A52ED9209EF999002E26D2 /* RxKingfisherError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxKingfisherError.swift; sourceTree = "<group>"; };
 		78A52EDA209EF999002E26D2 /* KingfisherManager+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KingfisherManager+Rx.swift"; sourceTree = "<group>"; };
 		78A52EDB209EF999002E26D2 /* Kingfisher+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kingfisher+Rx.swift"; sourceTree = "<group>"; };
 		78A52EE9209EF9B3002E26D2 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -203,7 +199,6 @@
 			children = (
 				78A52EDB209EF999002E26D2 /* Kingfisher+Rx.swift */,
 				78A52EDA209EF999002E26D2 /* KingfisherManager+Rx.swift */,
-				78A52ED9209EF999002E26D2 /* RxKingfisherError.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -480,7 +475,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78A52EDC209EF999002E26D2 /* RxKingfisherError.swift in Sources */,
 				78A52EE4209EF999002E26D2 /* Kingfisher+Rx.swift in Sources */,
 				78A52EE0209EF999002E26D2 /* KingfisherManager+Rx.swift in Sources */,
 			);
@@ -498,7 +492,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78A52EDF209EF999002E26D2 /* RxKingfisherError.swift in Sources */,
 				78A52EE7209EF999002E26D2 /* Kingfisher+Rx.swift in Sources */,
 				78A52EE3209EF999002E26D2 /* KingfisherManager+Rx.swift in Sources */,
 			);
@@ -508,7 +501,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78A52EDD209EF999002E26D2 /* RxKingfisherError.swift in Sources */,
 				78A52EE5209EF999002E26D2 /* Kingfisher+Rx.swift in Sources */,
 				78A52EE1209EF999002E26D2 /* KingfisherManager+Rx.swift in Sources */,
 			);

@@ -23,7 +23,6 @@ class ViewController: UIViewController {
 
     private var options: [String] {
         let faker = Faker()
-
         let names = (0...45)
                         .map { _ in faker.name.firstName().capitalized }
 
@@ -47,6 +46,11 @@ class ViewController: UIViewController {
     }
 
     private func setupRx() {
+        let imageSize = image.bounds.size
+        let imageURL: (String) -> URL = { text in
+            return URL(string: "https://fakeimg.pl/\(Int(imageSize.width))x\(Int(imageSize.height))/?text=\(text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)&font=museo")!
+        }
+
         Observable.just(options)
             .bind(to: picker.rx.itemTitles) { $1 }
             .disposed(by: disposeBag)
@@ -65,7 +69,7 @@ class ViewController: UIViewController {
         selectedOption
             .startWith("Select Option")
             .map { $0 == "-- Select an Option" ? "Select Option" : $0 }
-            .map { self.imgURL(withText: $0, andSize: self.image.bounds.size) }
+            .map(imageURL)
             .bind(to: image.kf.rx.image(options: [.transition(.fade(0.2)),
                                                   .keepCurrentImageWhileLoading,
                                                   .forceTransition]))
@@ -79,7 +83,7 @@ class ViewController: UIViewController {
                 self?.loader.isHidden = false
             })
             .withLatestFrom(selectedOption)
-            .map { self.imgURL(withText: $0, andSize: UIScreen.main.bounds.size) }
+            .map(imageURL)
             .flatMapLatest { KingfisherManager.shared.rx.retrieveImage(with: $0) }
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] image in
@@ -91,9 +95,5 @@ class ViewController: UIViewController {
                 UIApplication.shared.open(URL(string:"photos-redirect://")!)
             })
             .disposed(by: disposeBag)
-    }
-
-    private func imgURL(withText text: String, andSize size: CGSize) -> URL {
-        return URL(string: "https://fakeimg.pl/\(Int(size.width))x\(Int(size.height))/?text=\(text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)&font=museo")!
     }
 }

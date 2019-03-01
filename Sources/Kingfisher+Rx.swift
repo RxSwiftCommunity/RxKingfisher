@@ -15,27 +15,23 @@ extension Reactive where Base == KingfisherWrapper<ImageView> {
                          placeholder: Placeholder? = nil,
                          options: KingfisherOptionsInfo? = nil) -> Single<Image> {
         return Single<Image>.create { [base] single in
-            let task = base.setImage(
-                with: resource,
-                placeholder: placeholder,
-                options: options,
-                progressBlock: nil,
-                completionHandler: { (result) in
-                    switch result {
-                    case let .failure(error):
-                        single(.error(RxKingfisherError.kingfisherError(error)))
-                    case let .success(value):
-                        let image = value.image
-                        single(.success(image))
-                    }
-            })
+            let task = base.setImage(with: resource,
+                                     placeholder: placeholder,
+                                     options: options) { result in
+                switch result {
+                case .failure(let error):
+                    single(.error(error))
+                case .success(let value):
+                    single(.success(value.image))
+                }
+            }
             
             return Disposables.create { task?.cancel() }
         }
     }
 
     public func image(placeholder: Placeholder? = nil,
-                      options: KingfisherOptionsInfo? = nil) -> Binder<URL?> {
+                      options: KingfisherOptionsInfo? = nil) -> Binder<Resource?> {
         // `base.base` is the `Kingfisher` class' associated `ImageView`.
         return Binder(base.base) { imageView, image in
             imageView.kf.setImage(with: image,

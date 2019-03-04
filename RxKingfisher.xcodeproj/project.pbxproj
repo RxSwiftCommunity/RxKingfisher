@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0881BFCD222CF8F7001A51D2 /* ImageCache+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0881BFCC222CF8F7001A51D2 /* ImageCache+Rx.swift */; };
 		52D6D9871BEFF229002C0205 /* RxKingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* RxKingfisher.framework */; };
 		788F591420A3494500EF5FFE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F591320A3494500EF5FFE /* logo.png */; };
 		788F591520A3494500EF5FFE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 788F591320A3494500EF5FFE /* logo.png */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0881BFCC222CF8F7001A51D2 /* ImageCache+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageCache+Rx.swift"; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* RxKingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* RxKingfisher-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RxKingfisher-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9F01BEFFFBE002C0205 /* RxKingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxKingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +201,7 @@
 			children = (
 				78A52EDB209EF999002E26D2 /* Kingfisher+Rx.swift */,
 				78A52EDA209EF999002E26D2 /* KingfisherManager+Rx.swift */,
+				0881BFCC222CF8F7001A51D2 /* ImageCache+Rx.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 			files = (
 				78A52EE4209EF999002E26D2 /* Kingfisher+Rx.swift in Sources */,
 				78A52EE0209EF999002E26D2 /* KingfisherManager+Rx.swift in Sources */,
+				0881BFCD222CF8F7001A51D2 /* ImageCache+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

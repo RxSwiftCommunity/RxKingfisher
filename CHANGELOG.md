@@ -8,11 +8,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+### Removed
+
 ### Changed
 
-- Made `RxKingfisherError` public.
+## [0.5.0] - 2019-03-01
 
-### Removed
+### Changed
+- Minimum deployment targets are now iOS 10, tvOS 10 and macOS 10.12.
+- Minimum Swift Version is 4.2.
+- RxKingfisher now works with, and requires, Kingfisher 5
 
 ## [0.3.0] - 2018-10-15
 

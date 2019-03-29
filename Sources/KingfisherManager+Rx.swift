@@ -26,6 +26,23 @@ extension Reactive where Base == KingfisherManager {
             return Disposables.create { task?.cancel() }
         }
     }
+
+    public func retrieveImage(with source: Source,
+                              options: KingfisherOptionsInfo? = nil) -> Single<Image> {
+        return Single.create { [base] single in
+            let task = base.retrieveImage(with: source,
+                                          options: options) { result in
+                                            switch result {
+                                            case .success(let value):
+                                                single(.success(value.image))
+                                            case .failure(let error):
+                                                single(.error(error))
+                                            }
+            }
+
+            return Disposables.create { task?.cancel() }
+        }
+    }
 }
 
 extension KingfisherManager: ReactiveCompatible {

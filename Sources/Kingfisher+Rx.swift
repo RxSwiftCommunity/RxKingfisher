@@ -33,8 +33,8 @@ extension Reactive where Base == KingfisherWrapper<ImageView> {
     public func image(placeholder: Placeholder? = nil,
                       options: KingfisherOptionsInfo? = nil) -> Binder<Resource?> {
         // `base.base` is the `Kingfisher` class' associated `ImageView`.
-        return Binder(base.base) { imageView, image in
-            imageView.kf.setImage(with: image,
+        return Binder(base.base) { imageView, resource in
+            imageView.kf.setImage(with: resource,
                                   placeholder: placeholder,
                                   options: options)
         }

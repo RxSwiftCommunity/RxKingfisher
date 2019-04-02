@@ -12,6 +12,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+## [0.5.1] - 2019-04-02
+
+### Added
+- Suppprt ImageDataProvider
+- Support RetrieveImage(with source: Source)
+
 ## [0.5.0] - 2019-03-01
 
 ### Changed

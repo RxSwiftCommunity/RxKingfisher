@@ -11,9 +11,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Removed
 
 ### Changed
-- Support for retrieving Source
+
+## [1.0.0] - 2019-08-07
+
+### Changed
+
 - Minimum Swift Version is 5.
-- Support RxSwift 5.
+- Requires RxSwift 5.
+
+## [0.6.0] - 2019-08-07
+
+### Added
+
+- Support for retrieving Source
 
 ## [0.5.0] - 2019-03-01
 

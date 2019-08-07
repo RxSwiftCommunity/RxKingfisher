@@ -12,11 +12,11 @@ jobs:
     steps:
       - checkout
       - run: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS $XCODE_TEST_REPORTS
-      - restore_cache:
-          keys:
-            - v1-dep-{{ .Branch }}-
-            - v1-dep-master-
-            - v1-dep-
+      # - restore_cache:
+      #     keys:
+      #       - v1-dep-{{ .Branch }}-
+      #       - v1-dep-master-
+      #       - v1-dep-
       - run: 
           name: Bootstrap Carthage
           command: scripts/bootstrap-if-needed.sh

@@ -1,0 +1,42 @@
+PODS:
+  - Fakery (4.0.0)
+  - Kingfisher (5.7.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxKingfisher (1.0.0):
+    - Kingfisher (~> 5)
+    - RxCocoa (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+
+DEPENDENCIES:
+  - Fakery
+  - RxCocoa
+  - RxKingfisher (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Fakery
+    - Kingfisher
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+EXTERNAL SOURCES:
+  RxKingfisher:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Fakery: 476f6d947de432f84703acc830a1e7166330299b
+  Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxKingfisher: 95b4acea40ca0af03c6d5a7360928616f3250edc
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+
+PODFILE CHECKSUM: c2c6711fe7cf93b2a28df5eb886c2eb1ee88e971
+
+COCOAPODS: 1.7.5

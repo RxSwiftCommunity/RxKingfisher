@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Removed
 
 ### Changed
+- Support for retrieving Source
 
 ## [0.5.0] - 2019-03-01
 

@@ -16,12 +16,12 @@
 
 It provides Reactive Extensions on top of Kingfisher's `.kf` namespace, via `.kf.rx` and introduces two main usages:
 
-#### Bind URL to Image View
+#### Bind URL to Image View by `Resource` or `Source`
 
 Every Image view supports two different options for binding a URL to an Image view.
 
-```swift
-optionSelected // Observable<URL>
+```swift 
+optionSelected // Observable<Resource> or Observable<Source>
     .bind(to: image.kf.rx.image(options: [.transition(.fade(0.2))])
     .disposed(by: disposeBag)
 ```
@@ -29,13 +29,16 @@ optionSelected // Observable<URL>
 OR
 
 ```swift
-optionSelected
+optionSelected // Observable<Resource> or Observable<Source>    
     .flatMap { url in imageView.kf.rx.setImage(with: url, options: [.transition(.fade(0.2))]) }
     .subscribe(onNext: { image in
         print("Image successfully loaded and set on Image view: \(image)")
     })
     .disposed(by: disposeBag)
 ```
+> ### Refer
+> `URL` is implementing `Resource` (See [Kingfisher.Resource.swift](https://github.com/onevcat/Kingfisher/blob/c598ab7a7b3f3a4778ab18076b3449a30fc8c0d3/Sources/General/ImageSource/Resource.swift#L71-L74))
+
 
 ### Retrieve an Image without an Image View
 

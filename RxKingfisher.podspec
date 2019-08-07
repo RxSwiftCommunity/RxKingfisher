@@ -13,13 +13,13 @@ Pod::Spec.new do |s|
   s.source_files  = "Sources/**/*"
   s.frameworks  = "Foundation"
 
-  s.swift_version = "4.2"
+  s.swift_version = "5"
 
   s.ios.deployment_target = "10.0"
   s.tvos.deployment_target = "10.0"
   s.osx.deployment_target = "10.12"
 
   s.dependency 'Kingfisher', '~> 5'
-  s.dependency 'RxSwift', '~> 4.3'
-  s.dependency 'RxCocoa', '~> 4.3'
+  s.dependency 'RxSwift', '~> 5'
+  s.dependency 'RxCocoa', '~> 5'
 end

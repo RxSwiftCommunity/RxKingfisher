@@ -13,8 +13,10 @@ extension Reactive where Base == KingfisherManager {
     public func retrieveImage(with source: Source,
                               options: KingfisherOptionsInfo? = nil) -> Single<Image> {
         return Single.create { [base] single in
-            let task = base.retrieveImage(with: source,
+            var task: DownloadTask?
+            task = base.retrieveImage(with: source,
                                           options: options) { result in
+                task = nil
                 switch result {
                 case .success(let value):
                     single(.success(value.image))

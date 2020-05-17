@@ -19,7 +19,9 @@ extension Reactive where Base == KingfisherManager {
                 case .success(let value):
                     single(.success(value.image))
                 case .failure(let error):
-                    single(.error(error))
+                    if !error.isTaskCancelledError {
+                        single(.error(error))
+                    }
                 }
             }
 

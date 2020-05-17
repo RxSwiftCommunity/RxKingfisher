@@ -23,6 +23,9 @@
 		78A52EF4209EF9C6002E26D2 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A52EF1209EF9C6002E26D2 /* Kingfisher.framework */; };
 		78A52EFE209EF9E2002E26D2 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A52EFB209EF9E2002E26D2 /* RxSwift.framework */; };
 		78A52F00209EF9E2002E26D2 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A52EFD209EF9E2002E26D2 /* Kingfisher.framework */; };
+		85EFD9692470DAFC000AECB3 /* KingfisherErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EFD9682470DAFC000AECB3 /* KingfisherErrorExtensions.swift */; };
+		85EFD96A2470DB06000AECB3 /* KingfisherErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EFD9682470DAFC000AECB3 /* KingfisherErrorExtensions.swift */; };
+		85EFD96B2470DB06000AECB3 /* KingfisherErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EFD9682470DAFC000AECB3 /* KingfisherErrorExtensions.swift */; };
 		8933C78E1EB5B82C000D00A4 /* RxKingfisherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* RxKingfisherTests.swift */; };
 		8933C78F1EB5B82C000D00A4 /* RxKingfisherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* RxKingfisherTests.swift */; };
 		8933C7901EB5B82D000D00A4 /* RxKingfisherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* RxKingfisherTests.swift */; };
@@ -77,6 +80,7 @@
 		78A52EFB209EF9E2002E26D2 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/tvOS/RxSwift.framework; sourceTree = "<group>"; };
 		78A52EFC209EF9E2002E26D2 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/tvOS/RxCocoa.framework; sourceTree = "<group>"; };
 		78A52EFD209EF9E2002E26D2 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/tvOS/Kingfisher.framework; sourceTree = "<group>"; };
+		85EFD9682470DAFC000AECB3 /* KingfisherErrorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherErrorExtensions.swift; sourceTree = "<group>"; };
 		8933C7891EB5B82A000D00A4 /* RxKingfisherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxKingfisherTests.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* RxKingfisher.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RxKingfisher.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* RxKingfisherTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RxKingfisherTests.plist; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 			children = (
 				78A52EDB209EF999002E26D2 /* Kingfisher+Rx.swift */,
 				78A52EDA209EF999002E26D2 /* KingfisherManager+Rx.swift */,
+				85EFD9682470DAFC000AECB3 /* KingfisherErrorExtensions.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -478,6 +483,7 @@
 			files = (
 				78A52EE4209EF999002E26D2 /* Kingfisher+Rx.swift in Sources */,
 				78A52EE0209EF999002E26D2 /* KingfisherManager+Rx.swift in Sources */,
+				85EFD9692470DAFC000AECB3 /* KingfisherErrorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +501,7 @@
 			files = (
 				78A52EE7209EF999002E26D2 /* Kingfisher+Rx.swift in Sources */,
 				78A52EE3209EF999002E26D2 /* KingfisherManager+Rx.swift in Sources */,
+				85EFD96A2470DB06000AECB3 /* KingfisherErrorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +511,7 @@
 			files = (
 				78A52EE5209EF999002E26D2 /* Kingfisher+Rx.swift in Sources */,
 				78A52EE1209EF999002E26D2 /* KingfisherManager+Rx.swift in Sources */,
+				85EFD96B2470DB06000AECB3 /* KingfisherErrorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

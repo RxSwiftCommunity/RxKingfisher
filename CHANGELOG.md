@@ -7,10 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
+- Add SPM.
 
 ### Removed
 
 ### Changed
+- Resolve warnings due to Image deprecation.
 
 ## [1.0.0] - 2019-08-07
 

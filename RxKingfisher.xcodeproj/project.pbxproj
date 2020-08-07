@@ -197,8 +197,7 @@
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				78A52EDB209EF999002E26D2 /* Kingfisher+Rx.swift */,
-				78A52EDA209EF999002E26D2 /* KingfisherManager+Rx.swift */,
+				D31EB1F124DDB4E4003A286E /* RxKingfisher */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -211,6 +210,15 @@
 			);
 			name = Tests;
 			path = Tests/RxKingfisherTests;
+			sourceTree = "<group>";
+		};
+		D31EB1F124DDB4E4003A286E /* RxKingfisher */ = {
+			isa = PBXGroup;
+			children = (
+				78A52EDB209EF999002E26D2 /* Kingfisher+Rx.swift */,
+				78A52EDA209EF999002E26D2 /* KingfisherManager+Rx.swift */,
+			);
+			path = RxKingfisher;
 			sourceTree = "<group>";
 		};
 		DD7502721C68FC1B006590AF /* Frameworks */ = {

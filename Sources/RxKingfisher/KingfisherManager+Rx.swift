@@ -11,7 +11,7 @@ import Kingfisher
 
 extension Reactive where Base == KingfisherManager {
     public func retrieveImage(with source: Source,
-                              options: KingfisherOptionsInfo? = nil) -> Single<Image> {
+                              options: KingfisherOptionsInfo? = nil) -> Single<KFCrossPlatformImage> {
         return Single.create { [base] single in
             let task = base.retrieveImage(with: source,
                                           options: options) { result in
@@ -28,7 +28,7 @@ extension Reactive where Base == KingfisherManager {
     }
     
     public func retrieveImage(with resource: Resource,
-                              options: KingfisherOptionsInfo? = nil) -> Single<Image> {
+                              options: KingfisherOptionsInfo? = nil) -> Single<KFCrossPlatformImage> {
         let source = Source.network(resource)
         return retrieveImage(with: source, options: options)
     }

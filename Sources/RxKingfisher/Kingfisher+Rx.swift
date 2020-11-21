@@ -17,14 +17,14 @@ extension Reactive where Base == KingfisherWrapper<KFCrossPlatformImageView> {
         return Single.create { [base] single in
             let task = base.setImage(with: source,
                                      placeholder: placeholder,
-                                     options: options) { result in
+                                     options: options, completionHandler: { result in
                 switch result {
                 case .success(let value):
                     single(.success(value.image))
                 case .failure(let error):
                     single(.error(error))
                 }
-            }
+            })
             
             return Disposables.create { task?.cancel() }
         }

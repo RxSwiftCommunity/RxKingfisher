@@ -10,21 +10,21 @@ import RxCocoa
 import RxSwift
 import Kingfisher
 
-extension Reactive where Base == KingfisherWrapper<KFCrossPlatformImageView> {
+extension Reactive where Base == KingfisherWrapper<ImageView> {
     public func setImage(with source: Source?,
                          placeholder: Placeholder? = nil,
-                         options: KingfisherOptionsInfo? = nil) -> Single<KFCrossPlatformImage> {
+                         options: KingfisherOptionsInfo? = nil) -> Single<Image> {
         return Single.create { [base] single in
             let task = base.setImage(with: source,
                                      placeholder: placeholder,
-                                     options: options, completionHandler: { result in
+                                     options: options) { result in
                 switch result {
                 case .success(let value):
                     single(.success(value.image))
                 case .failure(let error):
                     single(.error(error))
                 }
-            })
+            }
             
             return Disposables.create { task?.cancel() }
         }
@@ -32,7 +32,7 @@ extension Reactive where Base == KingfisherWrapper<KFCrossPlatformImageView> {
     
     public func setImage(with resource: Resource?,
                          placeholder: Placeholder? = nil,
-                         options: KingfisherOptionsInfo? = nil) -> Single<KFCrossPlatformImage> {
+                         options: KingfisherOptionsInfo? = nil) -> Single<Image> {
         let source: Source?
         if let resource = resource {
             source = Source.network(resource)

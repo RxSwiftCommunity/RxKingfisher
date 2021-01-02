@@ -1,18 +1,18 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/RxSwiftCommunity/RxKingfisher/master/Images/logo.png" alt="RxKingfisher" title="RxKingfisher" width="557"/>
+<img src="https://raw.githubusercontent.com/RxSwiftCommunity/RxKingfisher/main/Images/logo.png" alt="RxKingfisher" title="RxKingfisher" width="557"/>
 </p>
 
 <p align="center">
-<a href="https://circleci.com/gh/RxSwiftCommunity/RxKingfisher/tree/master"><img src="https://img.shields.io/circleci/project/github/RxSwiftCommunity/RxKingfisher/master.svg?style=flat"></a>
+<a href="https://circleci.com/gh/RxSwiftCommunity/RxKingfisher/tree/main"><img src="https://img.shields.io/circleci/project/github/RxSwiftCommunity/RxKingfisher/main.svg?style=flat"></a>
 <a href="https://github.com/Carthage/Carthage/"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
 <a href="http://github.com/RxSwiftCommunity/RxKingfisher"><img src="https://img.shields.io/cocoapods/v/RxKingfisher.svg?style=flat"></a>
-<a href="https://raw.githubusercontent.com/RxSwiftCommunity/RxKingfisher/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/RxKingfisher.svg?style=flat"></a>
+<a href="https://raw.githubusercontent.com/RxSwiftCommunity/RxKingfisher/main/LICENSE"><img src="https://img.shields.io/cocoapods/l/RxKingfisher.svg?style=flat"></a>
 <a href="http://github.com/RxSwiftCommunity/RxKingfisher"><img src="https://img.shields.io/cocoapods/p/RxKingfisher.svg?style=flat"></a>
 </p>
 
 **RxKingfisher** is a Reactive Extension for <a href="https://github.com/onevcat/Kingfisher" target="_blank">Kingfisher</a> - a lightweight, pure-Swift library for downloading and caching images from the web. 
 
-<p align="center"><img src="https://raw.githubusercontent.com/RxSwiftCommunity/RxKingfisher/master/Images/example.gif" alt="RxKingfisher Example" title="RxKingfisher Example" /></a>
+<p align="center"><img src="https://raw.githubusercontent.com/RxSwiftCommunity/RxKingfisher/main/Images/example.gif" alt="RxKingfisher Example" title="RxKingfisher Example" /></a>
 
 It provides Reactive Extensions on top of Kingfisher's `.kf` namespace, via `.kf.rx` and introduces two main usages:
 

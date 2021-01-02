@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RxKingfisher"
-  s.version      = "1.0.0"
+  s.version      = "2.0.0"
   s.summary      = "Reactive extension for the Kingfisher image downloading and caching library"
   s.description  = <<-DESC
     Reactive extension for the Kingfisher image downloading and caching library
@@ -8,18 +8,18 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/RxSwiftCommunity/RxKingfisher"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Shai Mishali" => "freak4pc@gmail.com" }
-  s.social_media_url   = "https://raw.githubusercontent.com/RxSwiftCommunity/RxKingfisher/master/Images/logo.png"
+  s.social_media_url   = "https://raw.githubusercontent.com/RxSwiftCommunity/RxKingfisher/main/Images/logo.png"
   s.source       = { :git => "https://github.com/RxSwiftCommunity/RxKingfisher.git", :tag => s.version.to_s }
   s.source_files  = "Sources/**/*"
   s.frameworks  = "Foundation"
 
-  s.swift_version = "5.0"
+  s.swift_version = "5.1"
 
   s.ios.deployment_target = "10.0"
   s.tvos.deployment_target = "10.0"
   s.osx.deployment_target = "10.12"
 
   s.dependency 'Kingfisher', '~> 5'
-  s.dependency 'RxSwift', '~> 5'
-  s.dependency 'RxCocoa', '~> 5'
+  s.dependency 'RxSwift', '~> 6'
+  s.dependency 'RxCocoa', '~> 6'
 end

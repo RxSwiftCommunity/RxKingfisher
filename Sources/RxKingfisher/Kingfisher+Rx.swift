@@ -11,7 +11,7 @@ import RxSwift
 import Kingfisher
 
 extension KingfisherWrapper {
-    struct Rx {
+    public struct Rx {
         private let wrapper: KingfisherWrapper<KFCrossPlatformImageView>
         
         init(_ base: KingfisherWrapper<KFCrossPlatformImageView>) {
@@ -65,7 +65,7 @@ extension KingfisherWrapper {
 }
 
 extension KingfisherWrapper where Base == KFCrossPlatformImageView {
-    var rx: KingfisherWrapper.Rx {
+    public var rx: KingfisherWrapper.Rx {
         .init(self)
     }
 }

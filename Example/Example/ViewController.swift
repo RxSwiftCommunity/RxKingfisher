@@ -85,15 +85,15 @@ class ViewController: UIViewController {
             .withLatestFrom(selectedOption)
             .map(imageURL)
             .flatMapLatest { KingfisherManager.shared.rx.retrieveImage(with: $0) }
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] image in
-                self?.btnSave.isHidden = false
-                self?.loader.isHidden = true
+            .observe(on: MainScheduler.instance)
+            .subscribe(with: self) { vc, image in
+                vc.btnSave.isHidden = false
+                vc.loader.isHidden = true
 
                 // Save image to Photo Library and redirect
                 UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
                 UIApplication.shared.open(URL(string:"photos-redirect://")!)
-            })
+            }
             .disposed(by: disposeBag)
     }
 }

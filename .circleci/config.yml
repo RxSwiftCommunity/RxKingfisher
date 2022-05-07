@@ -32,7 +32,7 @@ jobs:
           command: set -o pipefail && xcodebuild build SWIFT_VERSION=5.6 -scheme RxKingfisher-Package -project RxKingfisher.xcodeproj -sdk iphonesimulator -destination "name=iPhone 12" | xcpretty
       - run:
           name: Build tvOS, Swift 5.6
-          command: set -o pipefail && xcodebuild build SWIFT_VERSION=5.6 -scheme RxKingfisher-Package -project RxKingfisher.xcodeproj -sdk appletvsimulator -destination "name=Apple TV 4K (at 1080p)" | xcpretty
+          command: set -o pipefail && xcodebuild build SWIFT_VERSION=5.6 -scheme RxKingfisher-Package -project RxKingfisher.xcodeproj -sdk appletvsimulator -destination "name=Apple TV 4K (at 1080p) (2nd generation)" | xcpretty
       - store_artifacts:
           path: $XCODE_TEST_REPORTS
   "RxKingfisher Release":

@@ -25,14 +25,14 @@ jobs:
           name: Generate xcodeproj
           command: swift package generate-xcodeproj     
       - run:
-          name: macOS, Swift 5.0
-          command: set -o pipefail && xcodebuild build SWIFT_VERSION=5.1 -scheme RxKingfisher-Package -project RxKingfisher.xcodeproj -sdk macosx -destination "arch=x86_64" | xcpretty
+          name: macOS, Swift 5.3
+          command: set -o pipefail && xcodebuild build SWIFT_VERSION=5.3 -scheme RxKingfisher-Package -project RxKingfisher.xcodeproj -sdk macosx -destination "arch=x86_64" | xcpretty
       - run:
-          name: iOS, Swift 5.0
-          command: set -o pipefail && xcodebuild build SWIFT_VERSION=5.1 -scheme RxKingfisher-Package -project RxKingfisher.xcodeproj -sdk iphonesimulator -destination "name=iPhone 12" | xcpretty
+          name: iOS, Swift 5.3
+          command: set -o pipefail && xcodebuild build SWIFT_VERSION=5.3 -scheme RxKingfisher-Package -project RxKingfisher.xcodeproj -sdk iphonesimulator -destination "name=iPhone 12" | xcpretty
       - run:
-          name: Build tvOS, Swift 5.0
-          command: set -o pipefail && xcodebuild build SWIFT_VERSION=5.1 -scheme RxKingfisher-Package -project RxKingfisher.xcodeproj -sdk appletvsimulator -destination "name=Apple TV 4K (at 1080p)" | xcpretty
+          name: Build tvOS, Swift 5.3
+          command: set -o pipefail && xcodebuild build SWIFT_VERSION=5.3 -scheme RxKingfisher-Package -project RxKingfisher.xcodeproj -sdk appletvsimulator -destination "name=Apple TV 4K (at 1080p)" | xcpretty
       - store_artifacts:
           path: $XCODE_TEST_REPORTS
   "RxKingfisher Release":

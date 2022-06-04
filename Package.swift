@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
   name: "RxKingfisher",
   platforms: [
-    .macOS(.v10_12), .iOS(.v10), .tvOS(.v10), .watchOS(.v3)
+    .macOS(.v10_14), .iOS(.v12), .tvOS(.v12), .watchOS(.v5)
   ],
   products: [
     .library(
@@ -15,7 +15,7 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.0.0" )),
-    .package(url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "5.0.0" )),
+    .package(url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "7.0.0" )),
   ],
   targets: [
     .target(

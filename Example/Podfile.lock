@@ -1,13 +1,11 @@
 PODS:
   - Fakery (5.1.0)
-  - Kingfisher (5.15.8):
-    - Kingfisher/Core (= 5.15.8)
-  - Kingfisher/Core (5.15.8)
+  - Kingfisher (7.2.1)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
   - RxKingfisher (2.1.0):
-    - Kingfisher (~> 5)
+    - Kingfisher (~> 7)
     - RxCocoa (~> 6)
     - RxSwift (~> 6)
   - RxRelay (6.2.0):
@@ -33,9 +31,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Fakery: a90caff00ca5cacde6c161c3eafc72314a03d34d
-  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
+  Kingfisher: 7c084bebf7d548c623ad41bcf765fb200efed369
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
-  RxKingfisher: a602fbf8751d756a7cc6190ddfedc2ce0d301377
+  RxKingfisher: 3718612911238bb1a52e50b9f3797394aa705f6c
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
 
